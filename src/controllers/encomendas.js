@@ -6,6 +6,7 @@ module.exports = (app) => {
 
         Encomendas.adicionar(encomenda)
             .then((encomendaAdicionada) => res.status(201).json(encomendaAdicionada))
-            .catch((erros) => next(erros));
-    })
+            .catch((erros) => next(erros)
+        );
+    });
 }
