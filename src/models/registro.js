@@ -6,6 +6,8 @@ class Registro{
     #dt_hr_leitura = "";
     #dt_hr_basculacao = "";
     #idInducao = "";
+    #saidaEsperada = "";
+    #saidaEfetiva = "";
 
     constructor(dados){
         this.codigo = dados.codigo;
@@ -13,6 +15,8 @@ class Registro{
         this.dataHoraLeitura = dados.dt_hr_leitura;
         this.dataHoraBasculacao = dados.dt_hr_basculacao;
         this.idInducao = dados.idInducao;
+        this.saidaEsperada = dados.saidaEsperada;
+        this.saidaEfetiva = dados.saidaEfetiva;
     }
 
     set codigo(codigo){
@@ -57,5 +61,21 @@ class Registro{
 
     get idInducao(){
         return this.#idInducao;
+    }
+
+    set saidaEsperada(saida){
+        this.#saidaEsperada = saida;
+    }
+
+    get saidaEsperada(){
+        return this.#saidaEsperada;
+    }
+
+    set saidaEfetiva(saida){
+        this.#saidaEfetiva = saida;
+    }
+
+    get saidaEfetiva(){
+        return this.#saidaEfetiva;
     }
 }
