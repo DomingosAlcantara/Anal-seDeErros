@@ -4,8 +4,9 @@ const readLine = require("readline");
 
 const pastaBase = () => { return "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVREIRO_22/";}
 const listaDeArquivos = (pasta) => {
-    const temp = pasta.reduce()
+    const temp = pasta.filter()
 }
+
 const uploadDeArquivos = class {
     #pasta = "";
 
