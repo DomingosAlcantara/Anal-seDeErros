@@ -3,9 +3,7 @@ const fs = require("fs");
 const readLine = require("readline");
 
 const pastaBase = () => { return "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVREIRO_22/";}
-const listaDeArquivos = (pasta) => {
-    const temp = pasta.filter()
-}
+const listaDeArquivos = (pasta) => await fsP.readdir(pasta);
 
 const uploadDeArquivos = class {
     #pasta = "";
