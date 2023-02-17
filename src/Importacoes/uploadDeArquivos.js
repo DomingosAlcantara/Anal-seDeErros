@@ -4,12 +4,13 @@ const readLine = require("readline");
 
 const pastaBase = () => { return "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVREIRO_22/"; }
 
-const async ehDiretorio = (pasta) => {
+const  ehDiretorio = async (pasta) => {
     if((await pasta).isDirectory()) return true;
+    return false;
 }
 
 const listaDeArquivos = (pasta) => {
-  const temp = pasta.filter();
+  const temp = pasta.filter(ehDiretorio);
 };
 
 const uploadDeArquivos = class {
