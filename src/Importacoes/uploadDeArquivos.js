@@ -6,6 +6,12 @@ const pastaBase = () => {
   return "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVREIRO_22/";
 };
 
+const pastaBase = () => { return "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVREIRO_22/"; }
+
+const ehDiretorio = (pasta) => {
+    if((await pasta).isDirectory()) return true;
+}
+
 const listaDeArquivos = (pasta) => {
   const temp = pasta.filter();
 };
