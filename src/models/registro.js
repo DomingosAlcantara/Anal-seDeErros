@@ -20,7 +20,7 @@ class Registro{
     }
 
     set codigo(codigo){
-        if(codigo.length !== 13){
+        if(codigo.length === 13){
             this.#codigo = codigo;
         } else {
             throw new Error("O código da Encomenda possui 13 caracteres", err);
