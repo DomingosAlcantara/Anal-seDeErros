@@ -2,19 +2,22 @@ const express = require("express");
 const consign = require("consign");
 
 module.exports = () => {
-    const app = express();
+  const app = express();
 
-    app.use(
-        express.urlencoded({
-            extended: true,
-        })
-    );
+  app.use(
+    express.urlencoded({
+      extended: true,
+    })
+  );
 
-    app.use(express.json());
+  app.use(express.json());
 
-    consign()
-        .include("./src/controllers")
-        .into(app);
-        
-    return app;
+  //Home
+  app.get("/", (req, res) => {
+    res.send("Sistema da Sema!");
+  });
+
+  consign().include("/src/controllers").into(app);
+
+  return app;
 };
