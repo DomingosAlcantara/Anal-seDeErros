@@ -8,10 +8,11 @@ const pastaBase = () => {
 
 const ehDiretorio = async (pasta) => {
   if ((await pasta).isDirectory()) return true;
+  return false;
 };
 
 const listaDeArquivos = (pasta) => {
-  const temp = pasta.filter();
+  return pasta.filter(ehDiretorio);
 };
 
 const uploadDeArquivos = class {
