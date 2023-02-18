@@ -2,11 +2,13 @@ const fsP = require("fs").promisse;
 const fs = require("fs");
 const readLine = require("readline");
 
-const pastaBase = () => { return "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVREIRO_22/"; }
+const pastaBase = () => {
+  return "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVREIRO_22/";
+};
 
-const async ehDiretorio = (pasta) => {
-    if((await pasta).isDirectory()) return true;
-}
+const ehDiretorio = async (pasta) => {
+  if ((await pasta).isDirectory()) return true;
+};
 
 const listaDeArquivos = (pasta) => {
   const temp = pasta.filter();
