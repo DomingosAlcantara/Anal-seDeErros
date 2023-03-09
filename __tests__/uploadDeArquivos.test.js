@@ -3,6 +3,6 @@ const customExpress = require("../src/config/customExpress");
 
 const request = supertest(customExpress());
 
-describe("Testando a busca dos Arquivos", () => {
-  test("Listando os arquivos presentes na pasta informada", async () => {});
+describe("Testes de Importação dos Arquivos", () => {
+  test("Listar arquivos", async () => {});
 });
