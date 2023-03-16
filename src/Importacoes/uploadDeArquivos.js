@@ -34,7 +34,9 @@ const uploadDeArquivos = class {
     return this.#pasta;
   }
 
-  async init() {}
+  listarDiretorios(){
+    
+  }
 };
 
 module.exports = uploadDeArquivos;
