@@ -2,39 +2,16 @@ const fsP = require("fs").promisse;
 const fs = require("fs");
 const readLine = require("readline");
 
-const pastaBase = () => {
-  return "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVREIRO_22/";
-};
+class uploadDeArquivos {
+  #folder = "";
 
-const ehDiretorio = async (pasta) => {
-  if ((await pasta).isDirectory()) return true;
-  return false;
-};
-
-const listaDeArquivos = (pasta) => {
-  return pasta.filter(ehDiretorio);
-};
-
-const uploadDeArquivos = class {
-  #pasta = "";
-
-  constructor(pasta) {
-    this.pasta(pasta);
+  constructor(folder) {
+    this.#folder = folder;
   }
 
-  set pasta(pasta) {
-    try {
-      this.#pasta = pasta;
-    } catch (err) {
-      throw new Error("A pasta informada não é valida");
-    }
+  get folder() {
+    return this.#folder;
   }
-
-  get pasta() {
-    return this.#pasta;
-  }
-
-  async init() {}
-};
+}
 
 module.exports = uploadDeArquivos;
