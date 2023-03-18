@@ -1,4 +1,4 @@
-const fsP = require("fs").promisse;
+const fsP = require("fs").promises;
 const fs = require("fs");
 const readLine = require("readline");
 
@@ -11,6 +11,22 @@ class uploadDeArquivos {
 
   get folder() {
     return this.#folder;
+  }
+
+  listFiles(folderPath) {
+    return fs.readdirSync(folderPath).map((file) => {
+      return `${folderPath}/${file}`;
+    });
+  }
+
+  readDirectory(folderPath) {
+    return new Promise((resolve, reject) => {
+      try {
+        resolve(this.listFiles(folderPath));
+      } catch (err) {
+        reject(err);
+      }
+    });
   }
 }
 

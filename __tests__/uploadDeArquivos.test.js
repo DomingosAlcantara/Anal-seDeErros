@@ -1,9 +1,13 @@
 const FolderBase = require("../src/Importacoes/uploadDeArquivos");
 
 describe("Testes de Importação dos Arquivos", () => {
-  test("Listando os diretórios", async () => {
-    const response = new FolderBase("/dados/");
-    const isVector = Array.isArray(await response.listarDiretorios());
+  test("Listando os Arquivos", async () => {
+    const response = new FolderBase(
+      "E:/Domingos/Documents/projetos-web/Domingos/RDATA/FEVEREIRO_22/Corrigidos/"
+    );
+    const isVector = Array.isArray(
+      await response.readDirectory(response.folder)
+    );
     expect(isVector).toBe(true);
   });
 });
