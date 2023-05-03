@@ -1,8 +1,8 @@
 const supertest = require("supertest");
 const registro = require("../src/models/registro.js");
 
-describe("Inicio dos testes", () => {
-    test("Listar os registros presentes no arquivo", () => {
+describe("Testes quanto aos registros", () => {
+    test("Validando a quantidade de campos no registro", () => {
         
     })
 });
