@@ -13,3 +13,12 @@ describe("Testes de Importação dos Arquivos", () => {
 
   
 });
+
+
+/**
+ * Tarefas a executar
+ * 
+ * Importar os dados dos arquivos
+ * Gravar os dados no banco dos dados
+ * Recuperar os dados
+ */
